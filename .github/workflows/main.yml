@@ -23,9 +23,14 @@ jobs:
           
       - name: Install dependencies
         run: npm install
-      
+        
+      - name: init npm
+        run: npm init -y
+      - name: install cypress
+        run: npm install cypress@12.14.0
+
       - name: Run Cypress Tests
-        run: npm run cy:run
+        run: npx cypress open
       
       
       
